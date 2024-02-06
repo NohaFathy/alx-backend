@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-
-from flask import Flask
-'''setup a basic Flask app
+'''Task 0: Basic Flask app
 '''
 
-app = Flask(__name__)
-@app = route('/')
+from flask import Flask, render_template
 
-def home():
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    '''default route'''
     return render_template("0-index.html",)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
